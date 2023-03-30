@@ -1,0 +1,62 @@
+theme = "base16_terminal"
+
+[editor]
+line-number = "relative"
+auto-completion = false
+bufferline = "multiple"
+
+# ----------------------------------
+
+[keys.normal]
+C-s = ":w"
+C-q = ":q"
+C-w = ":bc"
+C-t = ":hs"
+C-v = ":vs"
+C-r = ":config-reload"
+C-o = ":config-open"
+C-g = "normal_mode"
+
+ret = "insert_newline"
+tab = "insert_tab"
+g = { a = "code_action" }
+D = [
+  "move_char_left",
+  "delete_selection"
+]
+
+
+# ----------------------------------
+
+
+[keys.select]
+C-g = "normal_mode"
+
+
+# ----------------------------------
+
+[keys.insert]
+C-s = [
+  "normal_mode",
+  ":w",
+  "insert_mode",
+]
+C-u = [
+  "normal_mode",
+  "undo",
+  "insert_mode"
+]
+C-e = [
+  "goto_line_end",
+  "move_char_right",
+]
+C-a = "goto_line_start"
+C-g = "normal_mode"
+C-l = "move_char_right"
+C-h = "move_char_left"
+C-j = "move_line_down"
+C-k = "move_line_up"
+C-w = "move_next_word_start"
+C-W = "move_next_long_word_start"
+C-b = "move_prev_word_start"
+C-B = "move_prev_long_word_start"
